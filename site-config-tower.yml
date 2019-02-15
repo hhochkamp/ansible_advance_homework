@@ -1,5 +1,13 @@
 - hosts: localhost
   gather_facts: false 
   become: yes 
+  tasks:
+  - name: include roles next
+    debug:
+      msg: "nice try"
+
+- hosts: localhost
+  gather_facts: false 
+  become: yes 
   roles:
     - config-tower
